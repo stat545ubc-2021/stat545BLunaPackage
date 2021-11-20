@@ -23,8 +23,5 @@ library(datateachr)
 group_and_sort_by_count(steam_games, genre)
 group_and_sort_by_count(vancouver_trees, genus_name)
 
-## throws an error
-group_and_sort_by_count("aaaa", 1)
-group_and_sort_by_count(data1)
 
 }

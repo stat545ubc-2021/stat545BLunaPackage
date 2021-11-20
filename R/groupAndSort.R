@@ -1,3 +1,6 @@
+# avoid Note when running check
+utils::globalVariables(c("count"))
+
 #' Group and Sort by Count
 #'
 #' Group the data by variable names and sort them. If there is NA in the value, will consider it as one of the groups.
@@ -13,12 +16,9 @@
 #' group_and_sort_by_count(steam_games, genre)
 #' group_and_sort_by_count(vancouver_trees, genus_name)
 #'
-#' throws an error
-#' group_and_sort_by_count("aaaa", 1)
-#' group_and_sort_by_count(data1)
 #'
 #' @export
-#' @md
+
 group_and_sort_by_count <- function(data, variable_names) {
   stopifnot(is.data.frame(data))
   stopifnot(!missing(variable_names))
@@ -28,4 +28,3 @@ group_and_sort_by_count <- function(data, variable_names) {
             dplyr::summarise(count = dplyr::n()) %>%
             dplyr::arrange(count))
 }
-
