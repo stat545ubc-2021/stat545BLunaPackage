@@ -45,14 +45,14 @@ group_and_sort_by_count(vancouver_trees, genus_name)
 #> # … with 87 more rows
 ```
 
-The package will do the check on the argments. For function
-*group_and_sort_by_count*, the first argment should be a data frame, and
-the second one should not be empty. Below are the examples which will
-throw error.
+The package will do the check on the arguments. For function
+*group_and_sort_by_count*, the first argument should be a data frame,
+and the second one should not be empty. Below are the examples which
+will throw error.
 
 ``` r
-group_and_sort_by_count(vancouver_trees) ## it will throw a missing error since the second argment is missing
+group_and_sort_by_count(vancouver_trees) ## it will throw a missing error since the second argument is missing
 #> Error in group_and_sort_by_count(vancouver_trees): !missing(variable_names) is not TRUE
-group_and_sort_by_count("aaaa", 1) ## it will throw an error since the first argment is not a data frame
+group_and_sort_by_count("aaaa", 1) ## it will throw an error since the first argument is not a data frame
 #> Error in group_and_sort_by_count("aaaa", 1): is.data.frame(data) is not TRUE
 ```
